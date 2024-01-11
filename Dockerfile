@@ -2,5 +2,5 @@ FROM scratch
 ADD rootfs.tar.xz /
 EXPOSE 4449:4449
 
-CMD ["add-apt-repository", "ppa:mysteriumnetwork/node", "-yes"]
-RUN ["apt" "install", "myst", "-y"]
+ENTRYPOINT ["add-apt-repository", "ppa:mysteriumnetwork/node", "-yes"]
+ENTRYPOINT ["apt" "install", "myst", "-y"]
