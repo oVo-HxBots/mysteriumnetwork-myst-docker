@@ -1,6 +1,5 @@
 FROM scratch
 ADD rootfs.tar.xz /
-CMD ["/bin/sh"]
 EXPOSE 4449:4449
 
 RUN add-apt-repository ppa:mysteriumnetwork/node
