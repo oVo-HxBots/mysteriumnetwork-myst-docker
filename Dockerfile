@@ -1,6 +1,5 @@
-FROM scratch
-ADD rootfs.tar.xz /
+FROM ubuntu
 EXPOSE 4449:4449
 
-ENTRYPOINT ["add-apt-repository", "ppa:mysteriumnetwork/node", "-yes"]
-ENTRYPOINT ["apt" "install", "myst", "-y"]
+RUN add-apt-repository ppa:mysteriumnetwork/node -yes
+RUN apt install myst -y
